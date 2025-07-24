@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;
+}
+
+html,body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #333;
+}
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header, main{
+  text-align: center;
+}
+
+h1{
+  font-size: 56px;
+  argin-bottom: 40px;
+}
+
+.counter{
+  font-size: 70px;
+  font-weight: bold;
+}
+
+button{
+  font-size: 20px;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: all ease-in-out 300ms;
+}
+
+button:hover{
+  transform: scale(1.05)
+}
+
+.buttons-block{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+button.increment{
+  background: lightBlue;
+}
+
+button.delete{
+  background: lightYellow;
+}
+
+button.decrement{
+  background: pink;
+}
