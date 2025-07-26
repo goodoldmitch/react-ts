@@ -4,3 +4,6 @@
 
 ### simple-counter
 It's just a regular simple counter. Simple project to find out common conception of the stack
+
+### simple-todolist
+Standart todo-list to practice CRUD
