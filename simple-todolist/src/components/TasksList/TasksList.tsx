@@ -1,8 +1,6 @@
-type Task = {
-    id: number,
-    title: string,
-    description: string
-}
+import TaskItem from '../TaskItem/TaskItem'
+import styles from './TaskList.module.css'
+import type { Task } from '../../types/Task'
 
 type TasksList = Task[]
 
@@ -14,12 +12,9 @@ function TasksList({posts}: {posts: TasksList}){
         <div className="container">
             <h2>Tasks to do</h2>
             
-            <div className="tasks-list">
+            <div className={styles.tasksList}>
                 {postsList.map((item) => (
-                    <div className="tasks-item" key={item.id}>
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
-                    </div>
+                    <TaskItem id={item.id} title={item.title} description={item.description} key={item.id}/>
                 ))}
             </div>
         </div>

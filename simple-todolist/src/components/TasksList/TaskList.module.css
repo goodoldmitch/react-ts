@@ -1,0 +1,11 @@
+
+.tasksList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}

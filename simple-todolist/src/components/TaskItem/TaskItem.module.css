@@ -1,0 +1,11 @@
+.tasksItem{
+    text-align: center;
+}
+.tasksItem h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.tasksItem p{
+    font-size: 16px;
+    margin-bottom: 0;
+}

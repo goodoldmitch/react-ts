@@ -1,5 +1,5 @@
 import './App.css'
-import TasksList from './components/TasksList'
+import TasksList from './components/TasksList/TasksList'
 import Header from './components/Header'
 
 const posts = [
