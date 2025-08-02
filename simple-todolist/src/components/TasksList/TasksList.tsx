@@ -4,17 +4,17 @@ import type { Task } from '../../types/Task'
 
 type TasksList = Task[]
 
-function TasksList({posts}: {posts: TasksList}){
-    
-    const postsList = posts
+function TasksList({ tasks }: { tasks: TasksList }) {
 
-    return(
+    const tasksList = tasks
+
+    return (
         <div className="container">
-            <h2>Tasks to do</h2>
-            
+            <h2>{tasksList.length > 0 ? 'Tasks to do' : 'Please add first task'}</h2>
+
             <div className={styles.tasksList}>
-                {postsList.map((item) => (
-                    <TaskItem id={item.id} title={item.title} description={item.description} key={item.id}/>
+                {tasksList.map((item: Task) => (
+                    <TaskItem id={item.id} title={item.title} description={item.description} key={item.id} />
                 ))}
             </div>
         </div>
