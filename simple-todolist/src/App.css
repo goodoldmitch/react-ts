@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid lightBlue;
+}
+
 body{
   background: #333;
   color: #fff;
@@ -22,4 +27,12 @@ header{
 
 section{
   padding: 80px 0;
+}
+
+input.error:focus, input.error{
+  border: 1px solid red
+}
+.error-block{
+  position: absolute;
+  color: red;
 }
