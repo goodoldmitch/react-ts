@@ -9,12 +9,16 @@ function App() {
 
   const [taskList, setTaskList] = useState<Task[]>([]);
 
+  function deleteItem(id: number){
+    setTaskList(prev => prev.filter((item) => item.id !== id));
+  }
+
   return (
     <>
       <Header title="Simple ToDo list" />
       <section className="posts">
         <TaskForm addTask={(task) => setTaskList((prev) => [...prev, task])}  />
-        <TasksList tasks={taskList} />
+        <TasksList tasks={taskList} deleteItem={deleteItem}/>
       </section>
     </>
   )

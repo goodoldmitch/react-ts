@@ -2,11 +2,16 @@ import TaskItem from '../TaskItem/TaskItem'
 import styles from './TaskList.module.css'
 import type { Task } from '../../types/Task'
 
-type TasksList = Task[]
 
-function TasksList({ tasks }: { tasks: TasksList }) {
 
-    const tasksList = tasks
+type TasksListProps = {
+    tasks: Task[],
+    deleteItem: (id : number) => void
+}
+
+function TasksList({ tasks, deleteItem } : TasksListProps) {
+
+    const tasksList = tasks;
 
     return (
         <div className="container">
@@ -14,7 +19,12 @@ function TasksList({ tasks }: { tasks: TasksList }) {
 
             <div className={styles.tasksList}>
                 {tasksList.map((item: Task) => (
-                    <TaskItem id={item.id} title={item.title} description={item.description} key={item.id} />
+                    <TaskItem 
+                        id={item.id} 
+                        title={item.title} 
+                        description={item.description} 
+                        key={item.id} 
+                        deleteItem={deleteItem} />
                 ))}
             </div>
         </div>
